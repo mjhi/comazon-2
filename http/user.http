@@ -1,0 +1,53 @@
+GET http://localhost:3000/users
+
+###
+
+GET http://localhost:3000/users/b8f11e76-0a9e-4b3f-bccf-8d9b4fbf331e
+
+###
+
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+  "email": "yjkim@example.com", 
+  "firstName": "유진w",
+  "lastName": "김",
+  "address": "충청북도 청주시 북문로 210번길 5",
+  "userPreference" : {
+    "receiveEmail" : false
+  }
+}
+
+###
+
+PATCH http://localhost:3000/users/725960fa-2a7e-4479-a00a-6ae6cf122712
+Content-Type: application/json
+
+{
+  "firstName": "유진",
+  "email" : "yjkim2@example.com",
+  "userPreference" : {
+    "receiveEmail" : true
+  }
+}
+
+###
+
+DELETE http://localhost:3000/users/5a6150bf-ccf6-437a-aaa4-da6c2fb09d85
+
+
+###
+
+GET http://localhost:3000/users/73cb9639-d8b7-4f11-9a62-53f4187f3f11/saved-products
+
+###
+
+POST http://localhost:3000/users/73cb9639-d8b7-4f11-9a62-53f4187f3f11/saved-products
+Content-Type: application/json
+
+{
+  "productId" : "f751e63f-686d-42d4-898e-3ef6d4137908"
+}
+### 
+GET http://localhost:3000/users/73cb9639-d8b7-4f11-9a62-53f4187f3f11/orders
